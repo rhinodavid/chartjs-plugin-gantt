@@ -11,10 +11,11 @@ export function TimeGanttScale(Chart) {
             return ScaleUtils.getRightValue(this, rawValue);
         },
 
-        determineDataLimits: function () {
-            this.__proto__.__proto__.determineDataLimits.call(this);
-            ScaleUtils.determineDataLimits(this);
-        },
+        // Remove because it doesn't play well with time axis unless you want to only show data bounds
+        // determineDataLimits: function () {
+        //     this.__proto__.__proto__.determineDataLimits.call(this);
+        //     ScaleUtils.determineDataLimits(this);
+        // },
 
         getLabelForIndex: function (index, datasetIndex) {
             return ScaleUtils.getLabelForIndex(this, index, datasetIndex);
