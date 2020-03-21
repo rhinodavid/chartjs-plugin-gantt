@@ -397,11 +397,11 @@ function TimeGanttScale(Chart) {
     getRightValue: function (rawValue) {
       return _scaleUtils.ScaleUtils.getRightValue(this, rawValue);
     },
-    determineDataLimits: function () {
-      this.__proto__.__proto__.determineDataLimits.call(this);
-
-      _scaleUtils.ScaleUtils.determineDataLimits(this);
-    },
+    // Remove because it doesn't play well with time axis unless you want to only show data bounds
+    // determineDataLimits: function () {
+    //     this.__proto__.__proto__.determineDataLimits.call(this);
+    //     ScaleUtils.determineDataLimits(this);
+    // },
     getLabelForIndex: function (index, datasetIndex) {
       return _scaleUtils.ScaleUtils.getLabelForIndex(this, index, datasetIndex);
     }
